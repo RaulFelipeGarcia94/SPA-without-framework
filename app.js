@@ -28,13 +28,14 @@ const view = {
     const editButton = document.createElement("button");
     editButton.textContent = "Editar";
     editButton.addEventListener("click", function () {
-      const updatedTodo = prompt("Editar item:", todo);
-      const hasValueTodos = model.todos.includes(todo)
+      const updatedTodo = prompt("Editar item:", todo.replace(' (feito)', ''));
+      const hasValueEnteredInTheList = model.todos.includes(updatedTodo)
+
       if(updatedTodo === '') {
         alert("Este campo não pode ser vazio!")
         return
       }
-      if (updatedTodo !== '' && !hasValueTodos || updatedTodo === todo) {
+      if (updatedTodo !== '' && !hasValueEnteredInTheList || updatedTodo === todo) {
         controller.editTodo(todo, updatedTodo);
       } else {
         alert('Já existe a mesma tarefa cadastrada!')
