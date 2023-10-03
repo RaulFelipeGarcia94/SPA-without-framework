@@ -3,20 +3,29 @@
   <head>
     <title>Exemplo de SPA sem framework no MVC pattern</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <main id="app">
-      <section>
-        <h1>Exemplo de SPA sem framework no MVC pattern</h1>
-        <form id="todo-form">
-          <input type="text" id="todo-input" placeholder="Digite uma tarefa" />
-          <button type="submit">Adicionar</button>
-          <button type="button" id="todo-sort">Ordenar</button>
-        </form>
-        <ul id="todo-list">
-        </ul>
-    </section>
+      <div class="paper">
+        <div class="lines">
+          <section>
+            <h1>Exemplo de SPA sem framework no MVC pattern</h1>
+            <form id="todo-form">
+              <input type="text" id="todo-input" placeholder="Digite uma tarefa" />
+              <button type="submit">Adicionar</button>
+              <button type="button" id="todo-sort">Ordenar</button>
+            </form>
+            <ul id="todo-list">
+            </ul>
+          </section>
+        </div>
+        <div class="holes hole-top"></div>
+        <div class="holes hole-middle"></div>
+        <div class="holes hole-bottom"></div>
+      </div>
     </main>
+    
     <script src="app.js"></script>
   </body>
 </html>

@@ -5,49 +5,105 @@
 }
 
 body {
-    background-color: rgb(156, 211, 255);
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100%;
 }
 
-main {
-    padding: 60px;
-}
+.paper {
+    position: absolute;
+    height: 850px;
+    width: 750px;
+    background: rgba(255,255,255,0.9);
+    margin: -425px -425px;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0px 0px 5px 0px #888;
+  }
+  .paper::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    height: 100%;
+    width: 2px;
+    background: rgba(255,0,0,0.4);
+  }
+
+  .lines {
+    margin-top: 40px;
+    height: calc(100% - 40px);
+    width: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, rgb(56, 116, 165) 25px);
+  }
 
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    gap: 10px;
+    gap: 16px;
+}
+
+h1 {
+    font-family: 'Oleo Script', cursive;
 }
 
 button {
     border-radius: 8px;
     width: 80px;
-    height: 30px;
+    height: 25px;
     border: none;
     cursor: pointer;
-    margin: 8px;
+    margin-left: 8px;
 }
 
-
+#todo-input {
+    width: 250px;
+    height: 25px;
+}
 
 button[type="submit"] {
     background-color: green;
     color: white;
 }
 
-button[data-text="Ordenar"] {
-    background-color: rgb(140, 140, 140);
-    color: #fff;
+#todo-sort {
+    background-color: rgb(37, 72, 223);
+    color: white;
 }
 
 ul {
-    width: 100%;
+    width: 80%;
+    margin-top: 10px;
+    overflow-y: auto;
+    height: 710px;
 }
 
 li{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Oleo Script', cursive;
 }
+
+.holes {
+    position: absolute;
+    left: 10px;
+    height: 25px;
+    width: 25px;
+    background: lightgoldenrodyellow;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 0px #888;
+  }
+  .hole-top {
+    top: 10%;
+  }
+  .hole-middle {
+    top: 50%;
+  }
+  .hole-bottom {
+    bottom: 10%;
+  }

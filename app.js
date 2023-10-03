@@ -13,7 +13,7 @@ const view = {
     const todoItem = document.createElement("li"); 
     const todoButtons = document.createElement("div"); 
     todoItem.textContent = todo;
-    todoItem.style.marginBottom = "10px";
+    todoItem.style.marginBottom = "24px";
     todoItem.style.fontSize = "18px";
 
      const checkbox = document.createElement("input");
@@ -24,6 +24,10 @@ const view = {
       controller.toggleTodoStatus(todo, checkbox.checked);
     });
      checkbox.style.marginLeft = "8px";
+
+     if (isChecked) {
+      todoItem.style.textDecoration = "line-through";
+    }
 
     const editButton = document.createElement("button");
     editButton.textContent = "Editar";
