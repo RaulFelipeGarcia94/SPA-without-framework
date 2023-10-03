@@ -13,7 +13,7 @@ const view = {
     const todoItem = document.createElement("li"); 
     const todoButtons = document.createElement("div"); 
     todoItem.textContent = todo;
-    todoItem.style.marginBottom = "24px";
+    todoItem.style.marginBottom = "calc(10% - 28px)";
     todoItem.style.fontSize = "18px";
 
      const checkbox = document.createElement("input");

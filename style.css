@@ -13,15 +13,19 @@ body {
     min-height: 100%;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .paper {
-    position: absolute;
+    position: relative;
     height: 850px;
     width: 750px;
     background: rgba(255,255,255,0.9);
-    margin: -425px -425px;
-    left: 50%;
-    top: 50%;
     box-shadow: 0px 0px 5px 0px #888;
+    margin: 60px;
   }
   .paper::before {
     content: '';
@@ -62,7 +66,7 @@ button {
 
 #todo-input {
     width: 250px;
-    height: 25px;
+    height: 103%;
 }
 
 button[type="submit"] {
@@ -76,8 +80,9 @@ button[type="submit"] {
 }
 
 ul {
-    width: 80%;
-    margin-top: 10px;
+    width: 90%;
+    padding: 0 10%;
+    margin-top: 1.2%;
     overflow-y: auto;
     height: 710px;
 }
@@ -94,7 +99,7 @@ li{
     left: 10px;
     height: 25px;
     width: 25px;
-    background: lightgoldenrodyellow;
+    background: #eee;
     border-radius: 50%;
     box-shadow: inset 0px 0px 2px 0px #888;
   }
